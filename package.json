@@ -1,0 +1,19 @@
+{
+  "name": "AWS",
+  "version": "0.0.1",
+  "devDependencies": {
+    "docco": "*",
+    "should": "~1.2.1",
+    "mocha": "~1.8.1"
+  },
+  "dependencies": {
+    "underscore": "*",
+    "request": "*",
+    "debug": "*",
+    "qs": "*",
+    "crypto": "*",
+    "xml2js": "*",
+    "coffee-script": "~1.4.0",
+    "async": "~0.2.5"
+  }
+}
