@@ -1,5 +1,5 @@
 {
-  "name": "AWS",
+  "name": "alexa",
   "version": "0.0.1",
   "main": "./lib/alexa",
   "scripts": {
