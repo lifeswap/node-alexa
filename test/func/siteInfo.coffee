@@ -1,6 +1,6 @@
 should = require 'should'
 fs     = require 'fs'
-alexa  = require 'index'
+alexa  = require 'lib/alexa'
 
 describe 'getting info on a site', () ->
 
