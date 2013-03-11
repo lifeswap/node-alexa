@@ -2,9 +2,9 @@ request = require('request').defaults jar: false
 _       = require 'underscore'
 qs      = require 'qs'
 crypto  = require 'crypto'
+debug   = require 'debug'
 
-process.env.DEBUG='*'
-debug = require('debug') 'awis'
+debug = debug 'alexa:aws'
 
 hmacSha1 = (message, secret) ->
   crypto
