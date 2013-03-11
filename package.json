@@ -1,6 +1,14 @@
 {
   "name": "AWS",
   "version": "0.0.1",
+  "main": "./lib/alexa",
+  "scripts": {
+    "install": "cake build",
+    "build": "cake build",
+    "docs": "make doc",
+    "unit": "make unit",
+    "func": "make func"
+  },
   "devDependencies": {
     "docco": "*",
     "should": "~1.2.1",
