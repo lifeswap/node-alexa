@@ -3,6 +3,7 @@ xml2js = require 'xml2js'
 
 # better version of parseFloat
 makeFloat = (string) ->
+  return string if not string?
   return string if typeof string is 'number'
   string = string.replace /,/g, ''
   parseFloat string
