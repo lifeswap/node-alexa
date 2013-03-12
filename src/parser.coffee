@@ -43,7 +43,8 @@ drillIn = (object, fields) ->
   return undefined if not object?
   root = object
   for field in fields
-    root = root[field][0]
+    root = root[field]?[0]
+    return undefined if not root?
   root
 
 # ### parseSiteData
