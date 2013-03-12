@@ -191,10 +191,10 @@ exports.parseSiteInfoJSON = parseSiteInfoJSON = (json) ->
   speedData   = drillIn contentData, ['aws:Speed']
   # @todo: related data?
   trafficData = drillIn root, ['aws:TrafficData']
-  countryData = drillIn(trafficData, ['aws:RankByCountry'])['aws:Country']
-  cityData    = drillIn(trafficData, ['aws:RankByCity'])['aws:City']
-  usageData   = drillIn(trafficData, ['aws:UsageStatistics'])['aws:UsageStatistic']
-  subData     = drillIn(trafficData, ['aws:ContributingSubdomains'])['aws:ContributingSubdomain']
+  countryData = drillIn(trafficData, ['aws:RankByCountry'])?['aws:Country']
+  cityData    = drillIn(trafficData, ['aws:RankByCity'])?['aws:City']
+  usageData   = drillIn(trafficData, ['aws:UsageStatistics'])?['aws:UsageStatistic']
+  subData     = drillIn(trafficData, ['aws:ContributingSubdomains'])?['aws:ContributingSubdomain']
 
   url: contentData?['aws:DataUrl']?[0]?['_']
   title: siteData?['aws:Title']?[0]
