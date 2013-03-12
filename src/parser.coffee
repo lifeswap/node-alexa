@@ -1,16 +1,19 @@
-async = require 'async'
+_      = require 'underscore'
+async  = require 'async'
 xml2js = require 'xml2js'
 
 # better version of parseFloat
 makeFloat = (string) ->
-  return string if not string?
+  if not string? or _.isObject(string) and _.isEmpty(string)
+    return undefined
   return string if typeof string is 'number'
   string = string.replace /,/g, ''
   parseFloat string
 
 # better version of parseInt
 makeInt = (string) ->
-  return string if not string?
+  if not string? or _.isObject(string) and _.isEmpty(string)
+    return undefined
   return string if typeof string is 'number'
   string = string.replace /,/g, ''
   parseInt string
