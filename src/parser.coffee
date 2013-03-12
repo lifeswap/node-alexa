@@ -116,21 +116,20 @@ parseCityRank = (json) ->
     per_user:
       average_page_views: drillIn(json, ['aws:Contribution', 'aws:PerUser', 'aws:AveragePageViews'])
 
-parseUsage = (json) ->
-  timeRange = json['aws:TimeRange'][0]
+parseTimeRange = (timeRange) ->
   if timeRange['aws:Months']?
-    time_range =
-      type: 'months'
-      value: makeInt(timeRange['aws:Months'][0])
+    units: 'months'
+    value: makeInt(timeRange['aws:Months'][0])
   else
-    time_range =
-      type: 'days'
-      value: makeInt(timeRange['aws:Days'][0])
+    units: 'days'
+    value: makeInt(timeRange['aws:Days'][0])
+
+parseUsage = (json) ->
   rankData     = drillIn json, ['aws:Rank']
   reachData    = drillIn json, ['aws:Reach']
   pageViewData = drillIn json, ['aws:PageViews']
 
-  time_range: time_range
+  time_range: parseTimeRange(json['aws:TimeRange'][0])
   rank:
     value: makeInt(rankData['aws:Value'][0])
     delta: makeInt(rankData['aws:Delta'][0])
@@ -154,18 +153,8 @@ parseUsage = (json) ->
 
 
 parseSubdomain = (subdomain) ->
-  timeRange = subdomain['aws:TimeRange'][0]
-  if timeRange['aws:Months']?
-    time_range =
-      type: 'months'
-      value: makeInt(timeRange['aws:Months'][0])
-  else
-    time_range =
-      type: 'days'
-      value: makeInt(timeRange['aws:Days'][0])
-
   url: subdomain['aws:DataUrl'][0]
-  time_range: time_range
+  time_range: parseTimeRange(subdomain['aws:TimeRange'][0])
   reach: subdomain['aws:Reach'][0]['aws:Percentage'][0]
   page_views:
     percentage: subdomain['aws:PageViews'][0]['aws:Percentage'][0]
