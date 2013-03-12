@@ -1,0 +1,320 @@
+{
+  "aws:UrlInfoResponse": {
+    "$": {
+      "xmlns:aws": "http://alexa.amazonaws.com/doc/2005-10-05/"
+    },
+    "aws:Response": [
+      {
+        "$": {
+          "xmlns:aws": "http://awis.amazonaws.com/doc/2005-07-11"
+        },
+        "aws:OperationRequest": [
+          {
+            "aws:RequestId": [
+              "02c7b0bb-abb2-7202-3a17-8a88a64601ca"
+            ]
+          }
+        ],
+        "aws:UrlInfoResult": [
+          {
+            "aws:Alexa": [
+              {
+                "aws:ContactInfo": [
+                  {
+                    "aws:DataUrl": [
+                      {
+                        "_": "thelifeswap.com",
+                        "$": {
+                          "type": "canonical"
+                        }
+                      }
+                    ],
+                    "aws:PhoneNumbers": [
+                      {
+                        "aws:PhoneNumber": [
+                          {}
+                        ]
+                      }
+                    ],
+                    "aws:OwnerName": [
+                      {}
+                    ],
+                    "aws:Email": [
+                      {}
+                    ],
+                    "aws:PhysicalAddress": [
+                      {}
+                    ],
+                    "aws:CompanyStockTicker": [
+                      {}
+                    ]
+                  }
+                ],
+                "aws:ContentData": [
+                  {
+                    "aws:DataUrl": [
+                      {
+                        "_": "thelifeswap.com",
+                        "$": {
+                          "type": "canonical"
+                        }
+                      }
+                    ],
+                    "aws:SiteData": [
+                      {
+                        "aws:Title": [
+                          "thelifeswap.com/"
+                        ]
+                      }
+                    ],
+                    "aws:Speed": [
+                      {
+                        "aws:MedianLoadTime": [
+                          "5171"
+                        ],
+                        "aws:Percentile": [
+                          "5"
+                        ]
+                      }
+                    ],
+                    "aws:AdultContent": [
+                      "no"
+                    ],
+                    "aws:Language": [
+                      {
+                        "aws:Locale": [
+                          "en"
+                        ],
+                        "aws:Encoding": [
+                          "us-ascii"
+                        ]
+                      }
+                    ],
+                    "aws:LinksInCount": [
+                      "24"
+                    ],
+                    "aws:Keywords": [
+                      {}
+                    ],
+                    "aws:OwnedDomains": [
+                      {}
+                    ]
+                  }
+                ],
+                "aws:Related": [
+                  {
+                    "aws:DataUrl": [
+                      {
+                        "_": "thelifeswap.com",
+                        "$": {
+                          "type": "canonical"
+                        }
+                      }
+                    ],
+                    "aws:RelatedLinks": [
+                      {}
+                    ]
+                  }
+                ],
+                "aws:TrafficData": [
+                  {
+                    "aws:DataUrl": [
+                      {
+                        "_": "thelifeswap.com",
+                        "$": {
+                          "type": "canonical"
+                        }
+                      }
+                    ],
+                    "aws:Rank": [
+                      "2433027"
+                    ],
+                    "aws:RankByCountry": [
+                      {}
+                    ],
+                    "aws:RankByCity": [
+                      {}
+                    ],
+                    "aws:UsageStatistics": [
+                      {
+                        "aws:UsageStatistic": [
+                          {
+                            "aws:TimeRange": [
+                              {
+                                "aws:Months": [
+                                  "3"
+                                ]
+                              }
+                            ],
+                            "aws:Rank": [
+                              {
+                                "aws:Value": [
+                                  "2433027"
+                                ],
+                                "aws:Delta": [
+                                  "+1786892"
+                                ]
+                              }
+                            ],
+                            "aws:Reach": [
+                              {
+                                "aws:Rank": [
+                                  {
+                                    "aws:Value": [
+                                      "2561791"
+                                    ],
+                                    "aws:Delta": [
+                                      "+1900887"
+                                    ]
+                                  }
+                                ],
+                                "aws:PerMillion": [
+                                  {
+                                    "aws:Value": [
+                                      "0.4"
+                                    ],
+                                    "aws:Delta": [
+                                      "-80.40%"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "aws:PageViews": [
+                              {
+                                "aws:PerMillion": [
+                                  {
+                                    "aws:Value": [
+                                      "0.01"
+                                    ],
+                                    "aws:Delta": [
+                                      "-82.19%"
+                                    ]
+                                  }
+                                ],
+                                "aws:Rank": [
+                                  {
+                                    "aws:Value": [
+                                      "2513866"
+                                    ],
+                                    "aws:Delta": [
+                                      "1782487"
+                                    ]
+                                  }
+                                ],
+                                "aws:PerUser": [
+                                  {
+                                    "aws:Value": [
+                                      "2.8"
+                                    ],
+                                    "aws:Delta": [
+                                      "-8.88%"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "aws:TimeRange": [
+                              {
+                                "aws:Months": [
+                                  "1"
+                                ]
+                              }
+                            ],
+                            "aws:Rank": [
+                              {
+                                "aws:Value": [
+                                  "4921595"
+                                ],
+                                "aws:Delta": [
+                                  "+1860971"
+                                ]
+                              }
+                            ],
+                            "aws:Reach": [
+                              {
+                                "aws:Rank": [
+                                  {
+                                    "aws:Value": [
+                                      "4430414"
+                                    ],
+                                    "aws:Delta": [
+                                      "+566203"
+                                    ]
+                                  }
+                                ],
+                                "aws:PerMillion": [
+                                  {
+                                    "aws:Value": [
+                                      "0.2"
+                                    ],
+                                    "aws:Delta": [
+                                      "-13.89%"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "aws:PageViews": [
+                              {
+                                "aws:PerMillion": [
+                                  {
+                                    "aws:Value": [
+                                      "0"
+                                    ],
+                                    "aws:Delta": [
+                                      "-79.02%"
+                                    ]
+                                  }
+                                ],
+                                "aws:Rank": [
+                                  {
+                                    "aws:Value": [
+                                      "6011484"
+                                    ],
+                                    "aws:Delta": [
+                                      "3810544"
+                                    ]
+                                  }
+                                ],
+                                "aws:PerUser": [
+                                  {
+                                    "aws:Value": [
+                                      "1.3"
+                                    ],
+                                    "aws:Delta": [
+                                      "-75.35%"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "aws:ContributingSubdomains": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "aws:ResponseStatus": [
+          {
+            "$": {
+              "xmlns:aws": "http://alexa.amazonaws.com/doc/2005-10-05/"
+            },
+            "aws:StatusCode": [
+              "Success"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

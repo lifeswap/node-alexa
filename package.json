@@ -5,6 +5,7 @@
   "scripts": {
     "install": "cake build",
     "build": "cake build",
+    "start": "cake watch",
     "docs": "make doc",
     "unit": "make unit",
     "func": "make func"

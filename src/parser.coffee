@@ -9,6 +9,7 @@ makeFloat = (string) ->
 
 # better version of parseInt
 makeInt = (string) ->
+  return string if not string?
   return string if typeof string is 'number'
   string = string.replace /,/g, ''
   parseInt string
@@ -35,6 +36,7 @@ exports.parseTopSitesXML = (xml, callback) ->
 #
 # @private
 drillIn = (object, fields) ->
+  return undefined if not object?
   root = object
   for field in fields
     root = root[field][0]
@@ -189,16 +191,16 @@ exports.parseSiteInfoJSON = parseSiteInfoJSON = (json) ->
   usageData   = drillIn(trafficData, ['aws:UsageStatistics'])['aws:UsageStatistic']
   subData     = drillIn(trafficData, ['aws:ContributingSubdomains'])['aws:ContributingSubdomain']
 
-  url: contentData['aws:DataUrl'][0]['_']
-  title: siteData['aws:Title'][0]
-  description: siteData['aws:Description'][0]
+  url: contentData?['aws:DataUrl']?[0]?['_']
+  title: siteData?['aws:Title']?[0]
+  description: siteData?['aws:Description']?[0]
   speed:
-    median_load_time: makeInt(speedData['aws:MedianLoadTime'][0])
-    percentile: makeInt(speedData['aws:Percentile'][0])
-  links_in_count: makeInt(contentData['aws:LinksInCount'][0])
+    median_load_time: makeInt(speedData?['aws:MedianLoadTime']?[0])
+    percentile: makeInt(speedData?['aws:Percentile']?[0])
+  links_in_count: makeInt(contentData?['aws:LinksInCount']?[0])
   rank:
-    global: makeInt(trafficData['aws:Rank'][0])
-    countries: (parseCountryRank(country) for country in countryData)
-    cities: (parseCityRank(city) for city in cityData)
-  usage_stats: (parseUsage(stat) for stat in usageData)
-  subdomains: (parseSubdomain(sub) for sub in subData)
+    global: makeInt(trafficData?['aws:Rank']?[0])
+    countries: (parseCountryRank(country) for country in countryData ? [])
+    cities: (parseCityRank(city) for city in cityData ? [])
+  usage_stats: (parseUsage(stat) for stat in usageData ? [])
+  subdomains: (parseSubdomain(sub) for sub in subData ? [])

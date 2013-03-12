@@ -26,10 +26,29 @@ describe 'parsing top sites XML', () ->
       site.rank.should.eql 1
       done()
 
-describe 'parsing a site XML', () ->
+describe 'parsing big site XML', () ->
 
-  jsonData = JSON.parse fs.readFileSync('test/data/site_info.json')
-  xmlData  = fs.readFileSync('test/data/site_info.xml').toString()
+  jsonData = JSON.parse fs.readFileSync('test/data/pinterest.json')
+  xmlData  = fs.readFileSync('test/data/pinterest.xml').toString()
+
+  it 'should parse the XML into json without error', (done) ->
+    parser.parseXML xmlData, (err, json) ->
+      should.not.exist err
+      json.should.eql jsonData
+      done()
+
+  it 'should correctly parse the xml into good json', (done) ->
+    parser.parseSiteInfoXML xmlData, (err, json) ->
+      should.not.exist err
+      json.should.have.keys ['url', 'title', 'description', 'speed', 'links_in_count', 'rank', 'usage_stats', 'subdomains']
+      json.speed.should.have.keys ['median_load_time', 'percentile']
+      json.rank.should.have.keys ['global', 'countries', 'cities']
+      done()
+
+describe 'parsing small site XML', ->
+
+  jsonData = JSON.parse fs.readFileSync('test/data/lifeswap.json')
+  xmlData  = fs.readFileSync('test/data/lifeswap.xml').toString()
 
   it 'should parse the XML into json without error', (done) ->
     parser.parseXML xmlData, (err, json) ->
